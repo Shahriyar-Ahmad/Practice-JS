@@ -14,19 +14,90 @@
 
     let Info = ["Ali","Raza","Zain","Alex"]
     
-    // Prop Method (For delete somting from end of array. )
+    // Pop() and Push()
+
+
+    // Pop Method (For delete somthing from end of array. )
 
     Info.pop()
 
-    // Push Method (For add somting from end of array. )
+    // Push Method (For add somthing from end of array. )
 
     Info.push("Roy")
 
     // Eample
-
     
-  
-    console.log(Info)
+    // Q1: Replace Last one with new one?
+
+    // Before ["Ali","Raza","Zain","Roy"]
+    // After ["Ali","Raza","Zain","Alxender"]
+
+    // A1:
+            // Remove Last 
+             Info.pop()
+            // Add new
+            Info.push("Alxender")
+   
+    // Unshift() and sift()
+    
+    // Unshift() add first one to array.
+
+    Info.unshift("Abdula");
+
+    // shift() remove first one from last.
+
+    Info.shift();
+
+    // Concat() Method  it is use for combine multiple array in one.
+
+    let Info2 = ["Iqbad"]
+     
+    // Concat()
+    
+    let CombineArray= Info.concat(Info2);
+        console.log(CombineArray);
+
+
+    // Slice Method is use for create a new sub array of nessarry one from original array
+     
+    let Slice = [1,2,3,4,5,6]
+    let SubSlice = Slice.slice(0,5)
+    console.log(`SubSlice: ${SubSlice}`)
+
+    // Join() use for add all one in single sentence or in single one by passing a specific parameter in join() , create new array for not modifed original array
+
+    let Join = Slice.join("a")
+    console.log(`Join : ${Join}`)
+
+    // Indexof() and Includes() 
+
+    // Indexof() for finding someone in array if they were then it return its index else -1
+    const fruits = ["apple", "banana", "cherry", "date"];
+    const IndexOF = fruits.indexOf("cherry");
+    console.log(`Indexof carry is ${IndexOF}`)
+
+
+    // Example
+    if(fruits.indexOf("banana")){
+        fruits.push("banana exist")
+        console.log(fruits)
+    }
+
+    // Include() play same role like indexof but it reture value in true and fales not in its index
+
+    // Example
+
+    const Include = fruits.includes("date")
+    console.log(Include)
+
+    // Example 2
+
+    if(fruits.includes("banana exist")){
+        fruits.pop()
+        console.log(fruits)
+    }
+
+    console.log(`Last console : ${Info} `)
     </script>
 </body>
 </html>
