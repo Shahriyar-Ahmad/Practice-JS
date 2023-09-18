@@ -1,103 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Array Methods</h1>
 
     <script>
-     
-    //  Array
 
-    let Info = ["Ali","Raza","Zain","Alex"]
-    
-    // Pop() and Push()
+        //  Array
+
+        let Info = ["Ali", "Raza", "Zain", "Alex"]
+
+        // Pop() and Push()
 
 
-    // Pop Method (For delete somthing from end of array. )
+        // Pop Method (For delete somthing from end of array. )
 
-    Info.pop()
+        Info.pop()
 
-    // Push Method (For add somthing from end of array. )
+        // Push Method (For add somthing from end of array. )
 
-    Info.push("Roy")
+        Info.push("Roy")
 
-    // Eample
-    
-    // Q1: Replace Last one with new one?
+        // Eample
 
-    // Before ["Ali","Raza","Zain","Roy"]
-    // After ["Ali","Raza","Zain","Alxender"]
+        // Q1: Replace Last one with new one?
 
-    // A1:
-            // Remove Last 
-             Info.pop()
-            // Add new
-            Info.push("Alxender")
-   
-    // Unshift() and sift()
-    
-    // Unshift() add first one to array.
+        // Before ["Ali","Raza","Zain","Roy"]
+        // After ["Ali","Raza","Zain","Alxender"]
 
-    Info.unshift("Abdula");
+        // A1:
+        // Remove Last 
+        Info.pop()
+        // Add new
+        Info.push("Alxender")
 
-    // shift() remove first one from last.
+        // Unshift() and sift()
 
-    Info.shift();
+        // Unshift() add first one to array.
 
-    // Concat() Method  it is use for combine multiple array in one.
+        Info.unshift("Abdula");
 
-    let Info2 = ["Iqbad"]
-     
-    // Concat()
-    
-    let CombineArray= Info.concat(Info2);
+        // shift() remove first one from last.
+
+        Info.shift();
+
+        // Concat() Method  it is use for combine multiple array in one.
+
+        let Info2 = ["Iqbad"]
+
+        // Concat()
+
+        let CombineArray = Info.concat(Info2);
         console.log(CombineArray);
 
 
-    // Slice Method is use for create a new sub array of nessarry one from original array
-     
-    let Slice = [1,2,3,4,5,6]
-    let SubSlice = Slice.slice(0,5)
-    console.log(`SubSlice: ${SubSlice}`)
+        // Slice Method is use for create a new sub array of nessarry one from original array
 
-    // Join() use for add all one in single sentence or in single one by passing a specific parameter in join() , create new array for not modifed original array
+        let Slice = [1, 2, 3, 4, 5, 6]
+        let SubSlice = Slice.slice(0, 5)
+        console.log(`SubSlice: ${SubSlice}`)
 
-    let Join = Slice.join("a")
-    console.log(`Join : ${Join}`)
+        // Join() use for add all one in single sentence or in single one by passing a specific parameter in join() , create new array for not modifed original array
 
-    // Indexof() and Includes() 
+        let Join = Slice.join("a")
+        console.log(`Join : ${Join}`)
 
-    // Indexof() for finding someone in array if they were then it return its index else -1
-    const fruits = ["apple", "banana", "cherry", "date"];
-    const IndexOF = fruits.indexOf("cherry");
-    console.log(`Indexof carry is ${IndexOF}`)
+        // Indexof() and Includes() 
+
+        // Indexof() for finding someone in array if they were then it return its index else -1
+        const fruits = ["apple", "banana", "cherry", "date"];
+        const IndexOF = fruits.indexOf("cherry");
+        console.log(`Indexof carry is ${IndexOF}`)
 
 
-    // Example
-    if(fruits.indexOf("banana")){
-        fruits.push("banana exist")
-        console.log(fruits)
-    }
+        // Example
+        if (fruits.indexOf("banana")) {
+            fruits.push("banana exist")
+            console.log(fruits)
+        }
 
-    // Include() play same role like indexof but it reture value in true and fales not in its index
+        // Include() play same role like indexof but it reture value in true and fales not in its index
 
-    // Example
+        // Example
 
-    const Include = fruits.includes("date")
-    console.log(Include)
+        const Include = fruits.includes("date")
+        console.log(Include)
 
-    // Example 2
+        // Example 2
 
-    if(fruits.includes("banana exist")){
-        fruits.pop()
-        console.log(fruits)
-    }
+        if (fruits.includes("banana exist")) {
+            fruits.pop()
+            console.log(fruits)
+        }
 
-    console.log(`Last console : ${Info} `)
+        // Sort() this methode use for sortin or orderin by specific order
+
+        let Sort = [3, 4, 5, 2, 1]
+
+        Sort.sort((a, b) => a - b)
+        console.log(Sort)
+
+        // Example 1
+
+        const unsortedArray = [64, 25, 12, 22, 11];
+
+        function funSort(arr) {
+            arr.sort((a, b) => a - b)
+            return arr;
+        }
+        const sortedArray = funSort(unsortedArray);
+        console.log(sortedArray);
+
+
+        // Map() advance js ES6  use for itrate array mean for create loop or take a argument and applied a specific function a return value in new array and not effect original array
+
+        const Array = [1, 3, 4, 5.6, 5]
+
+        // map()
+
+        const Map = Array.map((a) => a * 3)
+        console.log(`Map: ${Map}`)
+
+        //  Filter() is use for filter specific from exiting array and return filter value in new array witout effecting original one.
+
+        const Filter = Array.filter((a) => a > 3)
+        console.log(`Filter: ${Filter}`)
+
+        // Reduce is use for reduce all array values in single one , it take two argument first accmulator and second is intial value;
+
+        const Reduce = Array.reduce((accmulator, intialValue) => accmulator += intialValue, 10);
+        console.log(`Reduce: ${Reduce}`)
+
+        // Example 1 Question:
+
+
+        // You are given an array of objects representing people's data. 
+        // Each object has the following properties: name (a string), age (a number), 
+        // and isStudent (a boolean). Write a function calculateAverageAdultAge(students) 
+        // that takes an array of these objects and calculates the average age of the adults 
+        // (people aged 18 or older) who are not students. Use the map(), filter(), 
+        // and reduce() methods to solve this problem.
+
+        const people = [
+            { name: "Alice", age: 28, isStudent: false },
+            { name: "Bob", age: 22, isStudent: true },
+            { name: "Charlie", age: 32, isStudent: false },
+            { name: "David", age: 19, isStudent: false },
+            { name: "Eve", age: 25, isStudent: true }
+        ];
+
+        function calculateAverageAdultAge(people){
+
+        
+
+        // Use filter() to select only adults who are not students.
+
+        const NotStudents = people.filter(NotStudent => NotStudent.isStudent === false)
+
+        //  Use map() to extract the ages of the selected adults.
+
+        const Ages = NotStudents.map((NotStudents) => NotStudents.age)
+
+        //  Use reduce() to calculate the sum of the ages.
+
+        const Sum = Ages.reduce((acc,iv)=> acc+iv, 0)
+
+        // Finally, divide the sum by the count of selected adults to get the average age.
+
+        // toFixed() is for fixed how much decimal you want after point in this case not need so value is 0
+
+        const AverageAgeofNotStudents = (Sum/Ages.length).toFixed(0);
+
+            return AverageAgeofNotStudents;
+        }
+
+        const averageAdultAge = calculateAverageAdultAge(people);
+        console.log(averageAdultAge); // Output: 26
+
+        console.log(`Last console : ${Info} `)
     </script>
 </body>
+
 </html>
