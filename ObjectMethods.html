@@ -16,7 +16,41 @@
         // Object Keys is name, such text in which we value store in this case Name,Class, RollNo
 
          const Objkey = Object.keys(Obj);
-              console.log(Objkey)
+              console.log(Objkey) // Output show arrow of given objects keys
+         // Example 1
+
+         if(Objkey.includes("Class")){
+            console.log("Class exist")
+            Obj.Room=12;
+            console.log(Obj.Room)
+         }
+         else{
+            console.log("Class not exist")
+         }
+
+         // Object values: It get values that store in object keys Like in this case Class is key and Nine is its value
+
+         const ObjValues = Object.values(Obj)
+         console.log(ObjValues)
+
+        //  Object Enteries: It get values as well as keys of given Object
+
+        const ObjEnteries = Object.entries(Obj)
+        console.log(ObjEnteries) // Output : show each value and key in array
+
+        // Object Freez: It is freez the Object , it mean we can never add new value in Object
+
+        Obj.Teacher = "Fraz";
+        console.log(Obj.Teacher)
+
+         Object.freeze(Obj); // Now we cannot add new value in object
+
+         Obj.School = "PIPS";
+         console.log(Obj.School) // Output : undefined because Object is freez
+         
+         
+         console.log(Obj)
+
     </script>
 </body>
 </html>
