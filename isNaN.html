@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>NaN (Not a Number)</h1>
+    <p>It represent a value that legally not a number like abc. It first convert value into legal number if poosible like in case of "12" , it look like string but isNaN first convert this into number
+        because it poosible </p>
+</body>
+<script>
+    // NaN
+    const Number = 12;
+    // for checking is a number or not we use property is isNaN()
+    console.log(isNaN(Number)) // output false becuse it is 12 legal number
+    // in case of boolen
+    const Bol = true; // output is false because it is number after conversiton  true = 1 , 1 is actual number , so output is false
+
+    console.log(isNaN(Bol));
+
+    const Text = "12";
+    console.log(isNaN(Text)) // output should false because it first convert value in number then check value.
+
+    const string = "djksjsk";
+    console.log(isNaN(string)) // output true because it in not a number
+  
+    const Integer = 12.222;
+    console.log(isNaN(Integer))
+
+    const Array = []; // ouput is false because [] emty array is equall to 0
+    console.log(isNaN(Array));
+
+    const Obj = {};
+    console.log(isNaN(Obj)) // false
+
+</script>
+</html>
