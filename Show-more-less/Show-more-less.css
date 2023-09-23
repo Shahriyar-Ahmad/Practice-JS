@@ -1,0 +1,14 @@
+/* styles.css */
+.content p {
+    max-height: 50px; /* Adjust as needed */
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+#toggleButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
