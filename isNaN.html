@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>isNaN</title>
 </head>
 <body>
     <h1>NaN (Not a Number)</h1>
@@ -14,26 +14,33 @@
     // NaN
     const Number = 12;
     // for checking is a number or not we use property is isNaN()
-    console.log(isNaN(Number)) // output false becuse it is 12 legal number
+    console.log(`Number: ${isNaN(Number)}`) // output false becuse it is 12 legal number
+    
     // in case of boolen
     const Bol = true; // output is false because it is number after conversiton  true = 1 , 1 is actual number , so output is false
-
-    console.log(isNaN(Bol));
+    console.log(`Boolen: ${isNaN(Bol)}`);
 
     const Text = "12";
-    console.log(isNaN(Text)) // output should false because it first convert value in number then check value.
+    console.log(`Number in string: ${isNaN(Text)}`) // output should false because it first convert value in number then check value.
 
     const string = "djksjsk";
-    console.log(isNaN(string)) // output true because it in not a number
+    console.log(`String: ${isNaN(string)}`) // output true because it in not a number
   
     const Integer = 12.222;
-    console.log(isNaN(Integer))
+    console.log(`Integer: ${isNaN(Integer)}`)
 
     const Array = []; // ouput is false because [] emty array is equall to 0
-    console.log(isNaN(Array));
+    console.log(`Empty Array: ${isNaN(Array)}`);
+
+    const Array2 = [1,3,3 ]  //Output is true hg
+    console.log(`Number Array: ${isNaN(Array2)}`);
 
     const Obj = {};
-    console.log(isNaN(Obj)) // false
+    console.log(`Empty Object: ${isNaN(Obj)}`)// Ouput is true
 
+    const Obj2= {Rollno: 15}; 
+    console.log(`Object with one key and value: ${isNaN(Obj2)}`);// output is true 
+    
+    console.log(`here true means: it is not a legal number.`)
 </script>
 </html>
