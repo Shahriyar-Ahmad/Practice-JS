@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Variables</title>
+</head>
+<body>
+    <h1>JavaScript Variables</h1>
+    <script>
+        var it_is_var = 1;
+        let it_is_let = 2;
+        const it_is_const =3;
+
+     const I_am_Function = () =>{
+        var it_is_fun_var = 4;
+        // var var it_is_fun_var = 10; Ouput is wit new value of var; it is car reassgin and redeclare
+        let it_is_fun_let = 5;
+         // let it_is_fun_let = 4;  Ouput: is error cant declare let again, but reassgin it agan
+        const it_is_fun_const =6;
+        //  it_is_const = 7; Ouput is error becuse we cannot can assgin or redeclare again
+        console.log(`var : ${it_is_var}, let: ${it_is_let}, const ${it_is_const}`)
+        if(it_is_const){
+            let it_is_block_variable = 133;
+        }
+        console.log(`try to acces block variable outside block: ${it_is_block_variable}`) // sow error 
+     }
+    I_am_Function()
+
+    console.log(`var : ${it_is_fun_var}, let: ${it_is_fun_let}, const ${it_is_fun_const}`) // Output is undefined because it function/block scope only access in {}
+    </script>
+</body>
+</html>
